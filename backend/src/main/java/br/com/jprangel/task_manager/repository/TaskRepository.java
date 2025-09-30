@@ -8,4 +8,5 @@ import br.com.jprangel.task_manager.model.TaskEntity;
 
 public interface TaskRepository extends JpaRepository<TaskEntity, String>{
     List<TaskEntity> findByListId(String listId);
+    boolean existsByListId(String listId);
 }
