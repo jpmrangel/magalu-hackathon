@@ -1,6 +1,12 @@
 import { createContext, useState, useEffect, useContext, type ReactNode } from 'react';
 import { api } from '../../src/lib/axios';
 
+export interface Attachment {
+    id: string;
+    name: string;
+    url: string;
+}
+
 export interface Task {
     id: string;
     title: string;
@@ -10,6 +16,8 @@ export interface Task {
     finishingDate: string | null;
     listId: string;
     isNew?: boolean;
+    notificationTime?: 'NONE' | '1' | '5' | '15' | '30' | '60';
+    attachment?: Attachment | File
 };
 
 export interface List {
@@ -49,7 +57,8 @@ export function TasksProvider({ children }: TasksProviderProps) {
                         ...task,
                         title: task.name,
                         date: task.expectedFinishingDate ? task.expectedFinishingDate.split('T')[0] : null,
-                        finishingDate: task.finishingDate
+                        finishingDate: task.finishingDate,
+                        attachments: task.attachment || []
                     }));
                     return { ...list, title: list.name, tasks: formattedTasks };
                 })
@@ -99,17 +108,35 @@ export function TasksProvider({ children }: TasksProviderProps) {
         try {
             const dto = {
                 name: taskData.title,
-                description: taskData.description,
+                description: taskData.description || '',
                 priority: taskData.priority,
+                listId: taskData.listId,
+                notificationTime: taskData.notificationTime,
                 expectedFinishingDate: taskData.date ? new Date(taskData.date).toISOString() : null,
                 finishingDate: taskData.finishingDate,
-                listId: taskData.listId
             };
             
+            let savedTask;
+
             if (taskData.isNew) {
-                await api.post('/tasks', dto);
+                const response = await api.post('/tasks', dto);
+                savedTask = response.data;
             } else {
-                await api.put(`/tasks/${taskData.id}`, dto);
+                const response = await api.put(`/tasks/${taskData.id}`, dto);
+                savedTask = response.data;
+            }
+            
+            const newFile = taskData.attachment instanceof File ? taskData.attachment : null;
+        
+            if (newFile) {
+                const fileFormData = new FormData();
+                fileFormData.append('attachment', newFile);
+
+                await api.post(`/api/files/upload`, fileFormData, {
+                    params: {
+                        taskId: savedTask.id
+                    }
+                });
             }
             await fetchLists();
         } catch (error) {
