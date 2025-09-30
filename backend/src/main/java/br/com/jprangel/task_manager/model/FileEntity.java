@@ -1,5 +1,7 @@
 package br.com.jprangel.task_manager.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,7 +13,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class FileEntity {
-
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
@@ -21,7 +22,23 @@ public class FileEntity {
     private String fileKey;
 
     @ManyToOne
+    @JsonManagedReference
     @JoinColumn(name = "task_id")
     private TaskEntity task;
 
+    public void setFileName(String originalFilename) {
+        this.fileName = originalFilename;
+    }
+
+    public void setFileKey(String fileKey) {
+        this.fileKey = fileKey;
+    }
+
+    public void setTask(TaskEntity task) {
+        this.task = task;
+    }
+
+    public String getFileKey() {
+        return fileKey;
+    }
 }

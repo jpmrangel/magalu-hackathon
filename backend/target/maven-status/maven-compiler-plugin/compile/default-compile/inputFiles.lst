@@ -39,5 +39,6 @@
 /home/taichi/Documentos/UFSCar/secomp/magalu2025/magalu-hackathon/backend/src/main/java/br/com/jprangel/task_manager/usecases/task/DeleteTaskUseCase.java
 /home/taichi/Documentos/UFSCar/secomp/magalu2025/magalu-hackathon/backend/src/main/java/br/com/jprangel/task_manager/usecases/task/GetTaskByIdUseCase.java
 /home/taichi/Documentos/UFSCar/secomp/magalu2025/magalu-hackathon/backend/src/main/java/br/com/jprangel/task_manager/usecases/task/GetTasksByListIdUseCase.java
+/home/taichi/Documentos/UFSCar/secomp/magalu2025/magalu-hackathon/backend/src/main/java/br/com/jprangel/task_manager/usecases/task/RemindeTaskUseCase.java
 /home/taichi/Documentos/UFSCar/secomp/magalu2025/magalu-hackathon/backend/src/main/java/br/com/jprangel/task_manager/usecases/task/UpdateFinishingDateUseCase.java
 /home/taichi/Documentos/UFSCar/secomp/magalu2025/magalu-hackathon/backend/src/main/java/br/com/jprangel/task_manager/usecases/task/UpdateTaskUseCase.java
