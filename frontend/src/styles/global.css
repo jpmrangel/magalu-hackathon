@@ -1,0 +1,60 @@
+:root{
+    --white: #fff;
+
+    --gray-100: #e1e1e6;
+
+    --green-500: #00875f;
+
+    --background: #252628;
+    --navbar-background: linear-gradient(90deg, #5b5b5b4d 0%, #4c44444d 100%);
+    --line: #4E4E4E;
+
+    --options-button-hover: #4E4E4E;
+    --options-button-pressed: #343333;
+
+    --low-priority-background: #46F7B7;
+    --medium-priority-background: #F5EB88;
+    --high-priority-background: #FFA775;
+    --super-high-priority-background: #F27F77;
+
+    --low-priority-text: #096343;
+    --medium-priority-text: #534B00;
+    --high-priority-text: #572D0A;
+    --super-high-priority-text: #500F0A;
+
+    --date-text: #646570;
+    --danger: #AF0505;
+    --late-task: linear-gradient(259deg, #381D1D 0.2%, #553434 99.8%);
+    --success: #029008;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body, #root {
+    height: 100%;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--gray-100);
+    -webkit-font-smoothing: antialiased;
+
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
+}   
+
+body, input, textarea, button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}

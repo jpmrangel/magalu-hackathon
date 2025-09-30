@@ -1,0 +1,91 @@
+.home {
+  display: flex;
+  height: 100%;
+  padding: 4.12rem 5rem 2rem;
+  gap: 1.5rem;
+  align-items: flex-start;
+  overflow-x: auto; 
+  margin-top: 4rem;
+
+  flex-wrap: nowrap;
+}
+
+.newListButton {
+    display: flex;
+    width: 18.75rem;
+    padding: 0.5rem;
+    align-items: center;
+    gap: 0.5rem;
+
+    background: none;
+    color: var(--white);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    flex-shrink: 0; 
+    align-self: flex-start;
+    transition: all 0.3s;
+}
+
+.newListButton:hover {
+    border-radius: 12px;
+    background: var(--options-button-hover);
+}
+
+.newListButton h6 {
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+.newListInputContainer {
+    width: 18.75rem;
+    padding: 0.5rem;
+    border-radius: 0.75rem;
+    flex-shrink: 0;
+}
+
+.newListInputContainer input {
+    display: flex;
+    width: 100%;
+    height: 2.25rem;
+    padding: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+
+    border-radius: 12px;
+    border: 1px solid var(--white);
+    background: none;
+    font-size: 1.2rem;
+    font-style: normal; 
+    font-weight: 600;
+    line-height: normal;
+
+    color: var(--white);
+}
+
+.newListInputContainer input:focus {
+    border-color: var(--white);
+    outline: none;
+}
+
+@media (max-width: 700px) {
+  .home {
+
+    flex-direction: column;
+    align-items: center;
+
+    overflow-x: hidden;
+    flex-wrap: nowrap;
+
+    padding: 1rem;
+    padding-top: 3rem;
+  }
+
+  .newListButton {
+    margin-left: 2%;
+    width: fit-content;
+  }
+}

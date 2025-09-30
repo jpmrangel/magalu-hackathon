@@ -1,0 +1,188 @@
+.taskCard {
+    display: flex;
+    width: 100%;
+    padding: 0.75rem 0.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+
+    border-radius: 8px;
+    border: 1px solid var(--line);
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.taskCard:hover {
+    border: 1px solid var(--white);
+    background: linear-gradient(259deg, #232323 0.2%, #393939 99.8%);
+}
+
+.finishedCard > .cardHeader,
+.finishedCard > .cardBody {
+    opacity: 0.4;
+}
+
+.overdueCard:hover {
+    background: var(--late-task);
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+.priorityTag {
+    display: flex;
+    padding: 0.25rem 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+
+    border-radius: 4px;
+}
+
+.priorityTag small {
+    line-height: 100%;
+    font-size: 0.83313rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.low {
+    background: var(--low-priority-background);
+    color: var(--low-priority-text);
+}
+
+.medium {
+    background: var(--medium-priority-background);
+    color: var(--medium-priority-text);
+}
+
+.high {
+    background: var(--high-priority-background);
+    color: var(--high-priority-text);
+}
+
+.superHigh {
+    background: var(--super-high-priority-background);
+    color: var(--super-high-priority-text);
+}
+
+.finalizeButton {
+    display: flex;
+    padding: 0.25rem;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    border-radius: 12px;
+    color: var(--white);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: color 0.2s;
+}
+
+.finalizeButton:not(.finished):hover {
+    color: var(--green-500);
+}
+
+.finalizeButton:not(.finished):hover .checkIconContainer {
+    border-color: var(--green-500);
+}
+
+.finalizeButton.finished {
+    color: var(--green-500);
+}
+
+.finalizeButton.finished .checkIconContainer {
+    border-color: var(--green-500);
+}
+
+.finalizeButton.finished:hover {
+    filter: brightness(0.9);
+}
+
+.checkIconContainer {
+    display: flex;
+    padding: 0.25rem; 
+    align-items: center;
+    gap: 0.625rem;
+
+    border: 1px dashed var(--white);
+    border-radius: 50px;
+    transition: border-color 0.2s;
+}
+
+.cardBody {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+}
+
+.cardBody h6 {
+    color: var(--white);
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.taskDesc {
+    color: var(--white);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    
+    overflow-wrap: break-word;
+    word-break: break-word;
+
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+}
+
+.cardFooter {
+    display: flex;
+    padding: 0.25rem 0.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    color: var(--date-text);
+    border-radius: 4px;
+    background: #E0E0E0;
+}
+
+.cardFooter time {
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 0.83313rem;
+}
+
+.overdue {
+    background-color: #DDA9A9;
+    color: var(--danger);
+}
+
+.finishedLate {
+    background-color: #DDA9A9;
+    color: var(--danger);
+    opacity: 0.4;
+}
+
