@@ -6,10 +6,15 @@ import br.com.jprangel.task_manager.model.TaskPriority;
 import jakarta.validation.constraints.FutureOrPresent;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+
+import java.time.LocalDateTime;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 @AllArgsConstructor
 public class CreateTaskDTO {
     @NotBlank(message = "O nome da lista é obrigatório")

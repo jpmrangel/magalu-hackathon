@@ -1,13 +1,13 @@
 import styles from './TaskDetailDrawer.module.css';
-import { BsCheck2, BsArrowBarRight, BsFillCalendarWeekFill } from 'react-icons/bs';
-import { AiFillDelete } from 'react-icons/ai'
+import { BsCheck2, BsArrowBarRight, BsFillCalendarWeekFill, BsPaperclip, BsFillPlusCircleFill, BsX, BsFillXCircleFill } from 'react-icons/bs';
+import { AiFillDelete, AiOutlinePaperClip } from 'react-icons/ai'
 
 import { useState, useEffect, useRef } from 'react';
 
 import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 
-import type { Task } from '../../../../contexts/TasksContext';
+import type { Task, Attachment } from '../../../../contexts/TasksContext';
 
 interface TaskDetailDrawerProps {
   task: Task | null;
@@ -19,10 +19,19 @@ interface TaskDetailDrawerProps {
 };
 
 const priorityOptions: { [key: string]: string } = {
-    'LOW': 'Baixa',
-    'MEDIUM': 'Média',
-    'HIGH': 'Alta',
-    'VERY_HIGH': 'Altíssima'
+  'LOW': 'Baixa',
+  'MEDIUM': 'Média',
+  'HIGH': 'Alta',
+  'VERY_HIGH': 'Altíssima'
+};
+
+const notificationOptions: { [key: string]: string } = {
+  'NONE': 'Não notificar',
+  '1': '1 minuto antes',
+  '5': '5 minutos antes',
+  '15': '15 minutos antes',
+  '30': '30 minutos antes',
+  '60': '1 hora antes'
 };
 
 export function TaskDetailDrawer({ task, onClose, onDeleteTaskRequest, onSave, onToggleFinishTask, onUpdateTask }: TaskDetailDrawerProps) {
@@ -31,6 +40,7 @@ export function TaskDetailDrawer({ task, onClose, onDeleteTaskRequest, onSave, o
   const [currentTitle, setCurrentTitle] = useState(''); 
   const titleInputRef = useRef<HTMLInputElement>(null);
   const dateInputRef = useRef<HTMLInputElement>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const formattedDate = task ? (task.date && format(new Date(task.date), "dd MMM, yyyy", { locale: ptBR }).toUpperCase()) : '';
   const isFinished = !!task?.finishingDate;
@@ -77,6 +87,38 @@ export function TaskDetailDrawer({ task, onClose, onDeleteTaskRequest, onSave, o
   const handleFinishEditingTitle = () => {
     onUpdateTask({ title: currentTitle }); 
     setIsEditingTitle(false);
+  };
+
+  const handleAddAttachmentClick = () => {
+    fileInputRef.current?.click();
+  };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files.length > 0) {
+        const file = e.target.files[0];
+        onUpdateTask({ attachment: file });
+    }
+};
+
+const handleDeleteAttachment = () => {
+    onUpdateTask({ attachment: undefined });
+};
+
+  const handleDownloadAttachment = (attachment: Attachment | File) => {
+    const link = document.createElement('a');
+    link.download = attachment.name;
+
+    if (attachment instanceof File) {
+      link.href = URL.createObjectURL(attachment);
+    } else {
+      link.href = attachment.url;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+    }
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -168,6 +210,22 @@ export function TaskDetailDrawer({ task, onClose, onDeleteTaskRequest, onSave, o
                   ))}
                 </select>
               </div>
+
+              <div className={styles.priorityField}>
+                <label htmlFor="notificationTime">Notificação</label>
+                <select
+                  id="notificationTime"
+                  name="notificationTime"
+                  value={task.notificationTime}
+                  onChange={handleChange}
+                >
+                  {Object.entries(notificationOptions).map(([value, label]) => (
+                      <option key={value} value={value}>
+                          {label}
+                      </option>
+                  ))}
+                </select>
+              </div>
             </div>
 
             <hr />
@@ -182,6 +240,50 @@ export function TaskDetailDrawer({ task, onClose, onDeleteTaskRequest, onSave, o
                 placeholder='Adicione mais detalhes sobre a tarefa aqui...'
               >
               </textarea>
+            </div>
+
+            <hr />
+                  
+            <div className={styles.drawerArchives}>
+              <p>Arquivos</p>
+
+              <div className={styles.attachmentsContainer}>
+                {task.attachment && (
+                  <div 
+                    key={task.attachment.name}
+                    className={styles.attachmentPill}
+                    onDoubleClick={() => handleDownloadAttachment(task.attachment!)}
+                    title="Clique duplo para baixar"
+                  >
+                    <AiOutlinePaperClip />
+                    <span className={styles.attachmentName}>
+                      {task.attachment.name.length > 20 ? `${task.attachment.name.substring(0, 18)}...` : task.attachment.name}
+                    </span>
+                    <button 
+                      className={styles.deleteAttachmentButton} 
+                      onClick={handleDeleteAttachment}
+                    >
+                      <BsFillXCircleFill size={16}/>
+                    </button>
+                  </div>
+                )}
+
+                <input
+                  type="file"
+                  multiple
+                  ref={fileInputRef}
+                  onChange={handleFileChange}
+                  style={{ display: 'none' }}
+                />
+                <button 
+                  className={styles.addAttachmentButton} 
+                  onClick={handleAddAttachmentClick}
+                >
+                  <BsFillPlusCircleFill size={20} />
+                  Adicionar arquivo
+                </button>
+              </div>
+
             </div>
 
             <hr />

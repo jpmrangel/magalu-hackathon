@@ -4,7 +4,75 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7990f7c-9103-4c93-b0f8-7084a4864352" name="Changes" comment="feat: seed" />
+    <list default="true" id="b7990f7c-9103-4c93-b0f8-7084a4864352" name="Changes" comment="feat: seed">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/jprangel/task_manager/controller/ListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/jprangel/task_manager/controller/ListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/jprangel/task_manager/model/TaskEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/jprangel/task_manager/model/TaskEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/jprangel/task_manager/repository/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/jprangel/task_manager/repository/TaskRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/jprangel/task_manager/usecases/TaskUseCaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/jprangel/task_manager/usecases/TaskUseCaseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/TaskManagerApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/TaskManagerApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/config/S3Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/config/S3Config.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/config/WebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/controller/FileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/controller/FileController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/controller/ListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/controller/ListController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/controller/StorageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/controller/StorageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/dto/CreateListDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/dto/CreateListDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/dto/CreateTaskDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/dto/CreateTaskDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/dto/ListResponseDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/dto/ListResponseDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/dto/TaskResponseDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/dto/TaskResponseDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/dto/UpdateFinishingDateDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/dto/UpdateFinishingDateDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/dto/UpdateTaskDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/dto/UpdateTaskDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/exceptions/ErrorMessageDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/exceptions/ErrorMessageDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/exceptions/ExceptionHandlerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/exceptions/ExceptionHandlerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/exceptions/ListAlreadyExistsException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/exceptions/ListAlreadyExistsException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/exceptions/ListDeletionNotAllowedException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/exceptions/ListDeletionNotAllowedException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/exceptions/ListNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/exceptions/ListNotFoundException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/exceptions/TaskNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/exceptions/TaskNotFoundException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/mapper/ListMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/mapper/ListMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/mapper/ListMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/mapper/ListMapperImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/mapper/TaskMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/mapper/TaskMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/mapper/TaskMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/mapper/TaskMapperImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/model/FileEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/model/FileEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/model/ListEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/model/ListEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/model/TaskEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/model/TaskEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/model/TaskPriority.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/model/TaskPriority.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/repository/FileRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/repository/FileRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/repository/ListRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/repository/ListRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/repository/TaskRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/repository/TaskRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/service/FileService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/service/FileService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/service/StorageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/service/StorageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/usecases/ListUseCaseManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/usecases/ListUseCaseManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/usecases/TaskUseCaseManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/usecases/TaskUseCaseManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/usecases/list/CreateListUseCase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/usecases/list/CreateListUseCase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/usecases/list/DeleteListUseCase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/usecases/list/DeleteListUseCase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/usecases/list/GetAllListsUseCase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/usecases/list/GetAllListsUseCase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/usecases/list/GetListByIdUseCase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/usecases/list/GetListByIdUseCase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/usecases/list/UpdateListUseCase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/usecases/list/UpdateListUseCase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/usecases/task/CreateTaskUseCase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/usecases/task/CreateTaskUseCase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/usecases/task/DeleteTaskUseCase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/usecases/task/DeleteTaskUseCase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/usecases/task/GetTaskByIdUseCase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/usecases/task/GetTaskByIdUseCase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/usecases/task/GetTasksByListIdUseCase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/usecases/task/GetTasksByListIdUseCase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/usecases/task/UpdateFinishingDateUseCase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/usecases/task/UpdateFinishingDateUseCase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/usecases/task/UpdateTaskUseCase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/jprangel/task_manager/usecases/task/UpdateTaskUseCase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/br/com/jprangel/task_manager/mapper/ListMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/br/com/jprangel/task_manager/mapper/ListMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/br/com/jprangel/task_manager/mapper/TaskMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/br/com/jprangel/task_manager/mapper/TaskMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/br/com/jprangel/task_manager/TaskManagerApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/br/com/jprangel/task_manager/TaskManagerApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/br/com/jprangel/task_manager/usecases/list/CreateListUseCaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/br/com/jprangel/task_manager/usecases/list/CreateListUseCaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/br/com/jprangel/task_manager/usecases/list/DeleteListUseCaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/br/com/jprangel/task_manager/usecases/list/DeleteListUseCaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/br/com/jprangel/task_manager/usecases/list/GetAllListsUseCaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/br/com/jprangel/task_manager/usecases/list/GetAllListsUseCaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/br/com/jprangel/task_manager/usecases/list/GetListByIdUseCaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/br/com/jprangel/task_manager/usecases/list/GetListByIdUseCaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/br/com/jprangel/task_manager/usecases/list/UpdateListUseCaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/br/com/jprangel/task_manager/usecases/list/UpdateListUseCaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/br/com/jprangel/task_manager/usecases/task/CreateTaskUseCaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/br/com/jprangel/task_manager/usecases/task/CreateTaskUseCaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/br/com/jprangel/task_manager/usecases/task/DeleteTaskUseCaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/br/com/jprangel/task_manager/usecases/task/DeleteTaskUseCaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/br/com/jprangel/task_manager/usecases/task/GetTaskByIdUseCaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/br/com/jprangel/task_manager/usecases/task/GetTaskByIdUseCaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/br/com/jprangel/task_manager/usecases/task/GetTasksByListIdUseCaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/br/com/jprangel/task_manager/usecases/task/GetTasksByListIdUseCaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/br/com/jprangel/task_manager/usecases/task/UpdateTaskUseCaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/br/com/jprangel/task_manager/usecases/task/UpdateTaskUseCaseTest.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,30 +101,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.TaskManagerApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.TaskManagerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feat/objectStorage&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/taichi/Documentos/UFSCar/secomp/magalu2025/magalu-hackathon/backend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="TaskManagerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
@@ -85,6 +155,10 @@
       <updated>1759255059499</updated>
       <workItem from="1759255060932" duration="6850000" />
       <workItem from="1759263761686" duration="13000" />
+      <workItem from="1759269966750" duration="440000" />
+      <workItem from="1759270435638" duration="648000" />
+      <workItem from="1759272307763" duration="10000" />
+      <workItem from="1759272347016" duration="14000" />
     </task>
     <task id="LOCAL-00001" summary="feat: seed">
       <option name="closed" value="true" />

@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 
 import org.hibernate.annotations.CreationTimestamp;
 
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -15,7 +16,12 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import lombok.Data;
+import lombok.ToString;
 
 @Data
 @Entity
@@ -30,6 +36,8 @@ public class TaskEntity {
 
     private String description;
 
+    private Integer reminderTime;
+
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private TaskPriority priority;
@@ -41,7 +49,9 @@ public class TaskEntity {
     private String reminderTime;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JsonBackReference
     @JoinColumn(name = "list_id", nullable = false)
+    @ToString.Exclude
     private ListEntity list;
 
     @CreationTimestamp

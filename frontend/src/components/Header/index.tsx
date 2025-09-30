@@ -1,12 +1,12 @@
 import styles from './Header.module.css';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/logo.png';
 
 import { BsBellFill } from 'react-icons/bs';
 import { FaUserCircle } from 'react-icons/fa';
 
 export function Header() {
     const hasNotification = true;
-    const userName = "José";
+    const userName = "Vitor";
 
     const notificationButtonClasses = `
         ${styles.headerButton}
@@ -16,11 +16,11 @@ export function Header() {
     return (
         <header className={styles.header}>
             <div className={styles.logoContainer}>
-                <img src={logo} alt="Peugeot Tasks" />
+                <img src={logo} alt="Luiza Tasks" />
 
                 <div className={styles.titleContainer}>
-                    <p>Peugeot</p>
-                    <p>Tasks</p>
+                    <p style={{color: '#0292FB', fontWeight: 'bold'}}>Luiza</p>
+                    <p style={{color: '#8B8F92'}}>Tasks</p>
                 </div>
             </div>
             
