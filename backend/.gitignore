@@ -9,6 +9,7 @@ target/
 *.iws
 *.iml
 *.ipr
+.vscode/
 
 # Mac
 .DS_Store
