@@ -1,0 +1,17 @@
+# Maven / Java
+target/
+*.class
+*.log
+*.iml
+
+# IDEs
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Mac
+.DS_Store
+
+# Outros
+out/
