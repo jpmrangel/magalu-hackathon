@@ -38,7 +38,7 @@ public class TaskEntity {
 
     private LocalDateTime finishingDate;
 
-    private Integer reminderTime;
+    private String reminderTime;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "list_id", nullable = false)

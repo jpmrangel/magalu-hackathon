@@ -1,5 +1,8 @@
 package br.com.jprangel.task_manager.usecases.task;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import br.com.jprangel.task_manager.dto.CreateTaskDTO;
 import br.com.jprangel.task_manager.dto.TaskResponseDTO;
 import br.com.jprangel.task_manager.exceptions.ListNotFoundException;
@@ -8,8 +11,6 @@ import br.com.jprangel.task_manager.model.ListEntity;
 import br.com.jprangel.task_manager.model.TaskEntity;
 import br.com.jprangel.task_manager.repository.ListRepository;
 import br.com.jprangel.task_manager.repository.TaskRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 @Service
 public class CreateTaskUseCase {
@@ -33,6 +34,10 @@ public class CreateTaskUseCase {
         newTask.setPriority(dto.getPriority());
         newTask.setExpectedFinishingDate(dto.getExpectedFinishingDate());
         newTask.setList(list);
+        if(dto.getReminderTime() != null && dto.getReminderTime().equals("NONE")){
+            newTask.setReminderTime(null);
+        }
+        newTask.setReminderTime(dto.getReminderTime());
 
         TaskEntity savedTask = taskRepository.save(newTask);
         return taskMapper.toTaskResponseDTO(savedTask);

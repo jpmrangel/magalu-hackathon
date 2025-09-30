@@ -1,16 +1,17 @@
 package br.com.jprangel.task_manager.usecases.task;
 
-import br.com.jprangel.task_manager.model.TaskEntity;
-import br.com.jprangel.task_manager.repository.TaskRepository;
-import br.com.jprangel.task_manager.usecases.EmailUseCaseManager;
-import jakarta.mail.MessagingException;
+import java.time.LocalDateTime;
+import java.util.stream.Stream;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.time.LocalDateTime;
-import java.util.stream.Stream;
+import br.com.jprangel.task_manager.model.TaskEntity;
+import br.com.jprangel.task_manager.repository.TaskRepository;
+import br.com.jprangel.task_manager.usecases.EmailUseCaseManager;
+import jakarta.mail.MessagingException;
 
 @Service
 public class RemindeTaskUseCase {
@@ -28,7 +29,7 @@ public class RemindeTaskUseCase {
 
         try (Stream<TaskEntity> tasksToRemind = taskRepository.findTasksForReminder(limitTime)) {
             tasksToRemind.forEach(task -> {
-                LocalDateTime reminderTime = task.getExpectedFinishingDate().minusMinutes(task.getReminderTime());
+                LocalDateTime reminderTime = task.getExpectedFinishingDate().minusMinutes(Integer.valueOf(task.getReminderTime()));
                 if (reminderTime.isBefore(LocalDateTime.now()) || reminderTime.isEqual(LocalDateTime.now())) {}
                 String message = "Você tem uma tarefa que precisa ser finalizada em " + task.getReminderTime() + " minutos!!";
                 try {

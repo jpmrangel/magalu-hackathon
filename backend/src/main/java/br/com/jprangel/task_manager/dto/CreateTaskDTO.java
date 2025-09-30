@@ -1,11 +1,11 @@
 package br.com.jprangel.task_manager.dto;
 
+import java.time.LocalDateTime;
+
 import br.com.jprangel.task_manager.model.TaskPriority;
 import jakarta.validation.constraints.FutureOrPresent;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-
-import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -21,4 +21,5 @@ public class CreateTaskDTO {
     private LocalDateTime expectedFinishingDate;
     @NotBlank(message = "O ID da lista é obrigatório")
     private String listId;
+    private String reminderTime;
 }

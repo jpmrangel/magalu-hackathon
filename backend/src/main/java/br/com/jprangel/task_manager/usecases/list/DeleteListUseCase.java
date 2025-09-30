@@ -1,11 +1,11 @@
 package br.com.jprangel.task_manager.usecases.list;
 
-import br.com.jprangel.task_manager.exceptions.ListDeletionNotAllowedException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import br.com.jprangel.task_manager.exceptions.ListNotFoundException;
 import br.com.jprangel.task_manager.model.ListEntity;
 import br.com.jprangel.task_manager.repository.ListRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 @Service
 public class DeleteListUseCase {

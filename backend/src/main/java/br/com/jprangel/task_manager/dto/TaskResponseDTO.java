@@ -3,9 +3,9 @@ package br.com.jprangel.task_manager.dto;
 import java.time.LocalDateTime;
 
 import br.com.jprangel.task_manager.model.TaskPriority;
-import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
@@ -18,4 +18,5 @@ public class TaskResponseDTO {
     private LocalDateTime expectedFinishingDate;
     private LocalDateTime finishingDate;
     private LocalDateTime createdAt;
+    private Integer reminderTime;
 }
