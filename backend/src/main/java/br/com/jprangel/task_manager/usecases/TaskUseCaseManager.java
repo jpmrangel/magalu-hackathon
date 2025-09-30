@@ -11,6 +11,8 @@ import br.com.jprangel.task_manager.usecases.task.GetTasksByListIdUseCase;
 import br.com.jprangel.task_manager.usecases.task.UpdateTaskUseCase;
 import br.com.jprangel.task_manager.usecases.task.UpdateFinishingDateUseCase;
 import lombok.RequiredArgsConstructor;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,11 +21,17 @@ import java.util.List;
 @RequiredArgsConstructor
 public class TaskUseCaseManager {
 
+    @Autowired
     private final CreateTaskUseCase createTaskUseCase;
+    @Autowired
     private final GetTaskByIdUseCase getTaskByIdUseCase;
+    @Autowired
     private final GetTasksByListIdUseCase getTasksByListIdUseCase;
+    @Autowired
     private final UpdateTaskUseCase updateTaskUseCase;
+    @Autowired
     private final UpdateFinishingDateUseCase updateFinishingDateUseCase;
+    @Autowired
     private final DeleteTaskUseCase deleteTaskUseCase;
 
     public TaskResponseDTO createTask(CreateTaskDTO dto) {
