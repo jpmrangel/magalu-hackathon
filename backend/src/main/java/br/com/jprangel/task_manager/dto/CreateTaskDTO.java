@@ -13,6 +13,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class CreateTaskDTO {
     @NotBlank(message = "O nome da lista é obrigatório")
     private String name;

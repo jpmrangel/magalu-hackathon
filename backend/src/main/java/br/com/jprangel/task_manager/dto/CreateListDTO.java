@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class CreateListDTO {
     @NotBlank(message = "O nome da lista é obrigatório")
     private String name;
