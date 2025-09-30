@@ -1,0 +1,11 @@
+br/com/jprangel/task_manager/usecases/list/DeleteListUseCaseTest.class
+br/com/jprangel/task_manager/usecases/list/CreateListUseCaseTest.class
+br/com/jprangel/task_manager/usecases/list/UpdateListUseCaseTest.class
+br/com/jprangel/task_manager/usecases/task/GetTasksByListIdUseCaseTest.class
+br/com/jprangel/task_manager/usecases/list/GetListByIdUseCaseTest.class
+br/com/jprangel/task_manager/usecases/task/GetTaskByIdUseCaseTest.class
+br/com/jprangel/task_manager/usecases/list/GetAllListsUseCaseTest.class
+br/com/jprangel/task_manager/usecases/task/UpdateTaskUseCaseTest.class
+br/com/jprangel/task_manager/usecases/task/CreateTaskUseCaseTest.class
+br/com/jprangel/task_manager/TaskManagerApplicationTests.class
+br/com/jprangel/task_manager/usecases/task/DeleteTaskUseCaseTest.class

@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7990f7c-9103-4c93-b0f8-7084a4864352" name="Changes" comment="feat: seed" />
+    <list default="true" id="b7990f7c-9103-4c93-b0f8-7084a4864352" name="Changes" comment="feat: seed">
+      <change beforePath="$PROJECT_DIR$/.idea/copilot.data.migration.agent.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/copilot.data.migration.edit.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/br/com/jprangel/task_manager/mapper/ListMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/br/com/jprangel/task_manager/mapper/ListMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/br/com/jprangel/task_manager/mapper/TaskMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/br/com/jprangel/task_manager/mapper/TaskMapperImpl.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,13 +52,15 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.TaskManagerApplication.executor": "Run",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "feat/objectStorage",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/taichi/Documentos/UFSCar/secomp/magalu2025/magalu-hackathon/backend",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -85,6 +97,7 @@
       <updated>1759255059499</updated>
       <workItem from="1759255060932" duration="6850000" />
       <workItem from="1759263761686" duration="13000" />
+      <workItem from="1759269966750" duration="440000" />
     </task>
     <task id="LOCAL-00001" summary="feat: seed">
       <option name="closed" value="true" />

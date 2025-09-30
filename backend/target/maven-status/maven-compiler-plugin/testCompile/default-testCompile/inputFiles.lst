@@ -1,0 +1,11 @@
+/home/taichi/Documentos/UFSCar/secomp/magalu2025/magalu-hackathon/backend/src/test/java/br/com/jprangel/task_manager/TaskManagerApplicationTests.java
+/home/taichi/Documentos/UFSCar/secomp/magalu2025/magalu-hackathon/backend/src/test/java/br/com/jprangel/task_manager/usecases/list/CreateListUseCaseTest.java
+/home/taichi/Documentos/UFSCar/secomp/magalu2025/magalu-hackathon/backend/src/test/java/br/com/jprangel/task_manager/usecases/list/DeleteListUseCaseTest.java
+/home/taichi/Documentos/UFSCar/secomp/magalu2025/magalu-hackathon/backend/src/test/java/br/com/jprangel/task_manager/usecases/list/GetAllListsUseCaseTest.java
+/home/taichi/Documentos/UFSCar/secomp/magalu2025/magalu-hackathon/backend/src/test/java/br/com/jprangel/task_manager/usecases/list/GetListByIdUseCaseTest.java
+/home/taichi/Documentos/UFSCar/secomp/magalu2025/magalu-hackathon/backend/src/test/java/br/com/jprangel/task_manager/usecases/list/UpdateListUseCaseTest.java
+/home/taichi/Documentos/UFSCar/secomp/magalu2025/magalu-hackathon/backend/src/test/java/br/com/jprangel/task_manager/usecases/task/CreateTaskUseCaseTest.java
+/home/taichi/Documentos/UFSCar/secomp/magalu2025/magalu-hackathon/backend/src/test/java/br/com/jprangel/task_manager/usecases/task/DeleteTaskUseCaseTest.java
+/home/taichi/Documentos/UFSCar/secomp/magalu2025/magalu-hackathon/backend/src/test/java/br/com/jprangel/task_manager/usecases/task/GetTaskByIdUseCaseTest.java
+/home/taichi/Documentos/UFSCar/secomp/magalu2025/magalu-hackathon/backend/src/test/java/br/com/jprangel/task_manager/usecases/task/GetTasksByListIdUseCaseTest.java
+/home/taichi/Documentos/UFSCar/secomp/magalu2025/magalu-hackathon/backend/src/test/java/br/com/jprangel/task_manager/usecases/task/UpdateTaskUseCaseTest.java
