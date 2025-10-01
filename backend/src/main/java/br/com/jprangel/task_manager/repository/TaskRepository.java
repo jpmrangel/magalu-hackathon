@@ -21,4 +21,5 @@ public interface TaskRepository extends JpaRepository<TaskEntity, String>{
             "AND t.reminderTime IS NOT NULL " +
             "AND t.expectedFinishingDate <= :limitTime")
     Stream<TaskEntity> findTasksForReminder(@Param("limitTime") LocalDateTime limitTime);
+    boolean existsByListId(String listId);
 }

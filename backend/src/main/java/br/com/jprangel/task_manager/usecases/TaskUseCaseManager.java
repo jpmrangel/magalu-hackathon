@@ -4,6 +4,7 @@ import br.com.jprangel.task_manager.dto.CreateTaskDTO;
 import br.com.jprangel.task_manager.dto.TaskResponseDTO;
 import br.com.jprangel.task_manager.dto.UpdateFinishingDateDTO;
 import br.com.jprangel.task_manager.dto.UpdateTaskDTO;
+import br.com.jprangel.task_manager.usecases.attachment.AttachFileToTaskUseCase;
 import br.com.jprangel.task_manager.usecases.task.CreateTaskUseCase;
 import br.com.jprangel.task_manager.usecases.task.DeleteTaskUseCase;
 import br.com.jprangel.task_manager.usecases.task.GetTaskByIdUseCase;
@@ -13,8 +14,11 @@ import br.com.jprangel.task_manager.usecases.task.UpdateFinishingDateUseCase;
 import lombok.RequiredArgsConstructor;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.List;
 
 @Service
@@ -33,6 +37,9 @@ public class TaskUseCaseManager {
     private final UpdateFinishingDateUseCase updateFinishingDateUseCase;
     @Autowired
     private final DeleteTaskUseCase deleteTaskUseCase;
+
+    private final AttachFileToTaskUseCase attachFileToTaskUseCase;
+    private final FileStorageCaseManager fileStorageCaseManager;
 
     public TaskResponseDTO createTask(CreateTaskDTO dto) {
         return createTaskUseCase.execute(dto);
@@ -56,5 +63,17 @@ public class TaskUseCaseManager {
 
     public void deleteTask(String id) {
         deleteTaskUseCase.execute(id);
+    }
+
+    public String attachFileToTask(MultipartFile file, Long taskId) throws IOException {
+        return attachFileToTaskUseCase.execute(file, taskId);
+    }
+
+    public Resource downloadAttachment(String fileName) {
+        return fileStorageCaseManager.loadFileAsResource(fileName);
+    }
+
+    public List<String> listTaskAttachments(Long taskId) {
+        return fileStorageCaseManager.listTaskAttachments(taskId);
     }
 }
